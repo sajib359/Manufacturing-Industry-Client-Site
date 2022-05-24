@@ -18,19 +18,13 @@ const Banner = () => {
           </div>
         </div> 
         <div id="slide3" class="carousel-item relative w-full">
-          <img src="" alt='' class="w-full h-3/4"></img>
+          <img src="https://img.freepik.com/free-photo/male-technician-working-broken-computer_23-2147922177.jpg?t=st=1653377085~exp=1653377685~hmac=a073a4bd0f26e862b19811b4fa20c091052f99015c78ee45dbe81b26ae483377&w=900" alt='' class="w-full h-3/4"></img>
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" class="btn btn-circle">❮</a> 
             <a href="#slide4" class="btn btn-circle">❯</a>
           </div>
         </div> 
-        <div id="slide4" class="carousel-item relative w-full">
-          <img src=""alt='' class="w-full h-3/4"></img> 
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" class="btn btn-circle">❮</a> 
-            <a href="#slide1" class="btn btn-circle">❯</a>
-          </div>
-        </div>
+        
       </div>
     );
 };
