@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import Navbar from './Pages/Shared/Navbar';
 import Reviews from './Pages/Reviews/Reviews';
 import Register from './Pages/Login/Register';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
