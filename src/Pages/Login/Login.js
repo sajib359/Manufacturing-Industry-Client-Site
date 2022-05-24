@@ -32,12 +32,12 @@ const Login = () => {
     navigate('/register')
 }
     return (
-      <div className="flex h-screen justify-center items-center">
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="flex h-screen justify-center items-center ">
+        <div className="card w-96 bg-base-100 shadow-xl ">
           <div className="card-body">
             <h2 className="text-center font-bold text-2xl">Login !</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="form-control w-full max-w-xs">
+              <div className="form-control w-full max-w-xs ">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
@@ -108,8 +108,8 @@ const Login = () => {
               />
             </form>
             
-      <p className="text-xl font-bold pb-5 pt-5 ">If You Not Registered !! <span className="text-orange-400 cursor-pointer" onClick={navigateRegister}>Please Register</span></p>
-      <p className="text-xl font-bold pb-5  ">Forgot Password ? <span className="text-orange-400 cursor-pointer" onClick={navigateResetPassword}>Reset Password</span></p>
+      <p className="text-lg font-bold pb-5 pt-5 ">If You Not Registered !! <span className="text-orange-400 cursor-pointer" onClick={navigateRegister}>Please Register</span></p>
+      <p className="text-lg font-bold pb-5  ">Forgot Password ? <span className="text-orange-400 cursor-pointer" onClick={navigateResetPassword}>Reset Password</span></p>
 
     </div>
 
@@ -118,7 +118,7 @@ const Login = () => {
 
             <button
               onClick={() => signInWithGoogle()}
-              className="btn btn-outline"
+              className="btn btn-outline bg-blue-300 m-3"
             >
               Continue With Google
             </button>
