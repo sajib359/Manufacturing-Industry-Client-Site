@@ -5,11 +5,12 @@ import Home from './Pages/Home/Home';
 import Products from './Pages/Products/Products';
 import Blogs from './Pages/Blogs/Blogs';
 import Portfolio from './Pages/Portfolio/Portfolio';
-import Login from './Pages/Login/Login';
+import Login from './Pages/User/Login';
 import Navbar from './Pages/Shared/Navbar';
 import Reviews from './Pages/Reviews/Reviews';
-import Register from './Pages/Login/Register';
+import Register from './Pages/User/Register';
 import NotFound from './Pages/NotFound/NotFound';
+import MyProfile from './Pages/User/MyProfile';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
+        <Route path='/profile' element={<MyProfile></MyProfile>}></Route> 
       </Routes>
     </div>
   );

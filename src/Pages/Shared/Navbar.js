@@ -3,13 +3,16 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import MyProfile from "../User/MyProfile";
 
 const Navbar = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const handleSignOut = () => {
-    signOut(auth);
-    navigate("/login");
+    // signOut(auth);
+     navigate("/profile");
+
+    <MyProfile></MyProfile>
   };
   const MenuItems = (
     <>
@@ -34,7 +37,7 @@ const Navbar = () => {
           onClick={handleSignOut}
          
         >
-          signout
+          My Profile
         </button>
       ) : (
         <li>
