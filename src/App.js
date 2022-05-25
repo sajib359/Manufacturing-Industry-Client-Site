@@ -11,6 +11,8 @@ import Reviews from './Pages/Reviews/Reviews';
 import Register from './Pages/User/Register';
 import NotFound from './Pages/NotFound/NotFound';
 import MyProfile from './Pages/User/MyProfile';
+import ViewProduct from './Pages/Products/ViewProduct';
+import UpdateProduct from './Pages/Products/UpdateProduct';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
+        <Route path="/update/:id" element={<UpdateProduct></UpdateProduct>}></Route>
+        <Route path="/view/:id" element={<ViewProduct></ViewProduct>}></Route>
         <Route path='/reviews' element={<Reviews></Reviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
