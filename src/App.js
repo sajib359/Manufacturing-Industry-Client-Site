@@ -13,7 +13,8 @@ import NotFound from './Pages/NotFound/NotFound';
 import MyProfile from './Pages/User/MyProfile';
 import ViewProduct from './Pages/Products/ViewProduct';
 import UpdateProduct from './Pages/Products/UpdateProduct';
-import AddProduct from './Pages/Addproduct/AddProduct';
+import AddProduct from './Pages/AddProduct/AddProduct';
+import AllProducts from './Pages/AllProducts/AllProducts';
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
         <Route path='/profile' element={<MyProfile></MyProfile>}></Route> 
-        <Route path='/profile' element={<AddProduct></AddProduct>}></Route> 
+        <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route> 
+        <Route path='/allproducts' element={<AllProducts></AllProducts>}></Route> 
       </Routes>
     </div>
   );
