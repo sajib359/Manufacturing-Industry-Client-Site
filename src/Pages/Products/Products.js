@@ -7,8 +7,9 @@ const Products = () => {
   
     return (
        <div>
-         <AllProducts></AllProducts>
+         {/* <AllProducts></AllProducts> */}
          <AddProduct></AddProduct>
+
        </div>
     );
 };
