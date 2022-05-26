@@ -75,9 +75,11 @@ const Navbar = () => {
             {MenuItems}
           </ul>
         </div>
+        <img className="w-12 h-12" src="logo.webp" alt="" />
         <a className="btn btn-ghost normal-case text-xl">
           Manufacturer Industry
         </a>
+
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{MenuItems}</ul>

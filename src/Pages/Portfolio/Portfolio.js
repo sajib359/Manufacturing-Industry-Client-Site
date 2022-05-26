@@ -81,47 +81,7 @@ const Portfolio = () => {
        
         <Skill></Skill>
         </div>
-        {/* <div class="rating">
-          <h4 className="mx-10">JavaScript</h4>
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" checked />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-        </div>
-        <div class="rating">
-          <h4 className="mx-10">JavaScript</h4>
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" checked />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-        </div>
-        <div class="rating">
-          <h4 className="mx-10">JavaScript</h4>
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" checked />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-        </div>
-        <div class="rating">
-          <h4 className="mx-10">JavaScript</h4>
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" checked />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-        </div>
-        <div class="rating">
-          <h4 className="mx-10">JavaScript</h4>
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" checked />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-          <input type="radio" name="rating-1" class="mask mask-star" />
-        </div>
-         */}
+       
         
       </div>
     
