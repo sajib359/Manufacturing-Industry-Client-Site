@@ -3,17 +3,15 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
-import MyProfile from "../User/MyProfile";
+
 
 const Navbar = () => {
-  const [user] = useAuthState(auth);
-  const navigate = useNavigate();
-  const handleSignOut = () => {
-    // signOut(auth);
-     navigate("/profile");
-
-    <MyProfile></MyProfile>
-  };
+  const[user]=useAuthState(auth);
+    const navigate = useNavigate();
+    const handleSignOut =()=>{
+        signOut(auth);
+        navigate('/login');
+    }
   const MenuItems = (
     <>
       <li>
@@ -32,19 +30,22 @@ const Navbar = () => {
         <Link to="/portfolio">Portfolio </Link>
       </li>
 
-      {user ? (
-        <button
-          onClick={handleSignOut}
+
+      {
+      user ? 
+        
          
-        >
-          My Profile
-        </button>
-      ) : (
+        
+        <button onClick={handleSignOut} >signOut</button>
+       
+      
+
+       : 
         <li>
           {" "}
           <Link to="/login">Login</Link>{" "}
         </li>
-      )}
+      }
     </>
   );
   return (
