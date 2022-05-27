@@ -21,6 +21,7 @@ import ManageOrder from './Pages/Dashboard/ManageOrder';
 import ManageUsers from './Pages/Dashboard/ManageUsers';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Order from './Pages/Products/Order';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
         <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route> 
+        <Route path='/order/:productId'element={<Order></Order>}></Route>
         <Route
           path="/dashboard"
           element={
