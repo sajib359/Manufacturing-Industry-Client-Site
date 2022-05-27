@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 
 const Order = () => {
-    const [user , loading] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const { productId } = useParams();
     const [product, setProduct] = useState([]);
     useEffect(() => {
@@ -16,8 +17,36 @@ const Order = () => {
                 console.log(data);
             });
     }, []);
-    if(loading){
+    if (loading) {
         return <Loading></Loading>
+    }
+    const handleOrder = event => {
+        event.preventDefault()
+        const order = {
+            orderProduct: product._id,
+            orderPName: product.name,
+            userEmail: user.email,
+            userName: user.displayName,
+            phone: event.target.phone.value,
+            address: event.target.address.value,
+            orderPrice: event.target.quantity.value * product.price,
+            orderQty: event.target.quantity.value,
+        }
+        fetch('http://localhost:5000/order', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(order),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                toast.success("Your order is successful", {
+                    autoClose: 1000,
+                });
+
+                event.target.reset();
+            });
     }
     return (
         <div className="">
@@ -26,7 +55,7 @@ const Order = () => {
                 <div class="hero-content flex-col lg:flex-row-reverse">
                     <div class="text-center lg:text-left lg:px-8 pt-8">
                         <h1 class="lg:text-3xl font-bold">
-                            <span className="text-secondary">{product.name}</span>
+                            <span className="text-secondary text-center">{product.name}</span>
                         </h1>
                         <img className="mx-auto" src={product.image} alt="" />
                         <p class="py-3">
@@ -43,7 +72,7 @@ const Order = () => {
                             <header>
                                 <h2 className="text-3xl font-bold pb-2">Order Details</h2>
                             </header>
-                            <form >
+                            <form onSubmit={handleOrder}>
                                 <div class="form-control mb-3">
                                     <input
                                         disabled
@@ -89,16 +118,7 @@ const Order = () => {
                                         class="input input-bordered"
                                     />
                                 </div>
-                                <div class="form-control mb-3">
-                                    <input
-                                        disabled
-                                        type="number"
-                                        name="price"
-                                        // value={totalPrice}
-                                        placeholder="Order total price"
-                                        class="input input-bordered"
-                                    />
-                                </div>
+
                                 {/* {<p className="text-sm text-error">{quantityError}</p>} */}
                                 <div class="form-control mt-6">
                                     {/* {quantityError ? (
