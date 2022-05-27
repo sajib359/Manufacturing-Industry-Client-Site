@@ -11,10 +11,16 @@ import Reviews from './Pages/Reviews/Reviews';
 import Register from './Pages/User/Register';
 import NotFound from './Pages/NotFound/NotFound';
 import MyProfile from './Pages/User/MyProfile';
-
-
 import AddProduct from './Pages/AddProduct/AddProduct';
-import AllProducts from './Pages/AllProducts/AllProducts';
+import RequireAuth from './Pages/Shared/RequireAuth';
+import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import MyReview from './Pages/Dashboard/MyReview';
+import RequireAdmin from './Pages/Shared/RequireAdmin';
+import ManageOrder from './Pages/Dashboard/ManageOrder';
+import ManageUsers from './Pages/Dashboard/ManageUsers';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
+
 
 function App() {
   return (
@@ -23,8 +29,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
-        
-      
         <Route path='/reviews' element={<Reviews></Reviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
@@ -33,7 +37,46 @@ function App() {
         <Route path='/*' element={<NotFound></NotFound>}></Route>
         <Route path='/profile' element={<MyProfile></MyProfile>}></Route> 
         <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route> 
-        <Route path='/allproducts' element={<AllProducts></AllProducts>}></Route> 
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="profile" element={<MyProfile></MyProfile>}></Route>
+          <Route
+            path="addproduct"
+            element={
+              <RequireAdmin>
+                <AddProduct></AddProduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manage"
+            element={
+              <RequireAdmin>
+                <ManageOrder></ManageOrder>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <ManageUsers></ManageUsers>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageproduct"
+            element={<ManageProduct></ManageProduct>}
+          ></Route>
+        </Route>
       </Routes>
     </div>
   );
