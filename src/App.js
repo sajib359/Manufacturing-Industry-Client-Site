@@ -7,10 +7,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import Portfolio from './Pages/Portfolio/Portfolio';
 import Login from './Pages/User/Login';
 import Navbar from './Pages/Shared/Navbar';
-import Reviews from './Pages/Reviews/Reviews';
 import Register from './Pages/User/Register';
 import NotFound from './Pages/NotFound/NotFound';
-
 import AddProduct from './Pages/AddProduct/AddProduct';
 import RequireAuth from './Pages/Shared/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -32,7 +30,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
-        <Route path='/reviews' element={<Reviews></Reviews>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

@@ -38,8 +38,8 @@ const AdminProductRow = ({ product, index, refetch }) => {
         <td>
           <img src={product?.image} className="w-8 h-8" alt=''></img>
         </td>
-        <td>{product?.aqty}</td>
-        <td>{product?.minqty}</td>
+        <td>{product?.aQty}</td>
+        <td>{product?.minQty}</td>
         <td>{product.price}</td>
         <td>{product.description.slice(0, 10)}</td>
         <td className="flex gap-1">

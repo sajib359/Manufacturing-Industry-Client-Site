@@ -25,7 +25,7 @@ const ManageOrderRow = ({order, refetch, index}) => {
             });
     };
     const addShipment = (id) => {
-        const url = `https://valophone.herokuapp.com/ship/${id}`;
+        const url = `http://localhost:5000/ship/${id}`;
         console.log(url);
         fetch(url, {
             method: "put",
@@ -78,34 +78,22 @@ const ManageOrderRow = ({order, refetch, index}) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td>{order.user}</td>
-            <td>
-                <p>OrderID: {order._id.slice(5, -15)}</p>
-                <p>Time: {order.time}</p>
-            </td>
+            
             <td>{order.address}</td>
-            <td>{order.product}</td>
-            <td>{order.qty}</td>
-            <td>{order.price}</td>
+            <td>{order.orderPName}</td>
+            <td>{order.orderQty}</td>
+            <td>{order.orderPrice}</td>
             <td>
                 <span className="block">{order?.paymentStatus?.toUpperCase()}</span>{" "}
                 {order?.paymentStatus !== "pending" && <span>TrxID: {order.trxId}</span>}
             </td>
             <td>
-                <span className="block">{order?.orderStatus?.toUpperCase()}</span>
-                {order?.orderStatus === "shipped" && (
-                    <span>Date: {order.shippingDate}</span>
-                )}
-            </td>
-            <td>
-                {order?.paymentStatus === "pending" && (
-                    <span
+                {order?.paid !== true ? <span
                         onClick={() => markPaid(order._id)}
                         className="bg-primary text-center p-1 my-1 block text-white rounded cursor-pointer"
                     >
                         Make Paid
-                    </span>
-                )}
+                    </span>: <p>Paid</p> }
                 {order?.orderStatus === "placed" && (
                     <span
                         onClick={() => addShipment(order._id)}

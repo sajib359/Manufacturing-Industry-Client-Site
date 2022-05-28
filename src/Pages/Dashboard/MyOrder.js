@@ -26,7 +26,7 @@ const MyOrder = () => {
     }
     return (
         <div>
-            <h1>my order</h1>
+            
             <div class="overflow-x-auto mt-2 lg:mt-5">
                 <table class="table w-full">
                     <thead>

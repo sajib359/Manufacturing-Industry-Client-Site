@@ -2,7 +2,7 @@ import React from 'react';
 
 const CompanyProfile = () => {
   return (
-    <div className='flex bg-sky-200'>
+    <div className='grid grid-cols-1 lg:grid-cols-2 bg-sky-200'>
         
         <div class="hero min-h-screen bg-base-200">
           <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

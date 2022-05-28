@@ -25,15 +25,12 @@ const ManageOrder = () => {
         <table className="table table-compact w-full">
           <thead>
             <tr>
-              <th></th>
               <th>Customer</th>
-              <th>Info</th>
               <th>Address</th>
               <th>Product</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Payment Status</th>
-              <th>Order Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -49,15 +46,12 @@ const ManageOrder = () => {
           </tbody>
           <tfoot>
             <tr>
-              <th></th>
               <th>Customer</th>
-              <th>Info</th>
               <th>Address</th>
               <th>Product</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Payment Status</th>
-              <th>Order Status</th>
               <th>Action</th>
             </tr>
           </tfoot>

@@ -47,7 +47,7 @@ const MyProfile = () => {
       console.log(loggedUser);
     return (
         <div>
-        <h2>My Profile</h2>
+       
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* section 1  */}
           <div>

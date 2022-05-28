@@ -9,7 +9,7 @@ const Product = ({ product }) => {
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure>
-                <img src={product.image} alt="" />
+                <img src={product.imgURL} alt="" />
             </figure>
             <div className="card-body">
                 <h2 className="card-title"> <span>Product name:</span>
@@ -19,10 +19,10 @@ const Product = ({ product }) => {
                 <p className="pb-2">{product.description}</p>
                 <div className="flex justify-between">
                     <div className="badge badge-outline p-2">
-                        Min. Qty. - {product.minQty} pc's
+                        Min. Qty. - {product.minquantity} pc's
                     </div>
                     <div className="badge badge-outline">
-                        Able. Qty. - {product.aQty} pc's
+                        Able. Qty. - {product.aqty} pc's
                     </div>
                 </div>
                 <button
