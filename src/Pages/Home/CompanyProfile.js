@@ -62,10 +62,6 @@ const CompanyProfile = () => {
                 </span>{" "}
               </li>
             </ol>
-
-
-
-            <button class="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>

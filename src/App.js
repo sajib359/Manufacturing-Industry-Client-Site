@@ -35,8 +35,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
-        <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route> 
-        <Route path='/order/:productId'element={<Order></Order>}></Route>
+        <Route path='/addproduct' element={<AddProduct></AddProduct>}></Route>
+        <Route path='/order/:productId' element={<RequireAuth><Order></Order></RequireAuth>}></Route>
         <Route
           path="/dashboard"
           element={
@@ -52,16 +52,13 @@ function App() {
           <Route
             path="addproduct"
             element={
-              // <RequireAdmin>
-                <AddProduct></AddProduct>
-              // </RequireAdmin>
-            }
+              <AddProduct></AddProduct>}
           ></Route>
           <Route
             path="manage"
             element={
               // <RequireAdmin>
-                <ManageOrder></ManageOrder>
+              <ManageOrder></ManageOrder>
               // {/* </RequireAdmin> */}
             }
           ></Route>
@@ -69,7 +66,7 @@ function App() {
             path="users"
             element={
               // <RequireAdmin>
-                <ManageUsers></ManageUsers>
+              <ManageUsers></ManageUsers>
               // {/* </RequireAdmin> */}
             }
           ></Route>
