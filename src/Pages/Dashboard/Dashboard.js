@@ -7,10 +7,11 @@ const Dashboard = () => {
   const [user] = useAuthState(auth);
   const [loggedUser, setLoggedUser] = useState({});
   useEffect(() => {
-    fetch(`https://valophone.herokuapp.com/user/${user.email}`)
+    fetch(`http://localhost:5000/user/${user.email}`)
       .then((res) => res.json())
       .then((data) => setLoggedUser(data));
   }, []);
+  console.log();
   return (
     <div className="drawer drawer-mobile">
       <input id="dashDrawer" type="checkbox" className="drawer-toggle" />
