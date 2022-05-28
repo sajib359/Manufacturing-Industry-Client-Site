@@ -1,7 +1,10 @@
 import React from "react";
+import Products from "../Products/Products";
 import Footer from "../Shared/Footer/Footer";
 import Banner from "./Banner";
 import CompanyProfile from "./CompanyProfile";
+import Ratting from "./Ratting";
+import Reviews from "./Reviews";
 
 const Home = () => {
   return (
@@ -15,6 +18,9 @@ const Home = () => {
         This mainly Manufacture Computer Casing and Power Supply
       </p>
       </div>
+      <Products></Products>
+      <Ratting></Ratting>
+      <Reviews></Reviews>
       
       <CompanyProfile></CompanyProfile>
           
