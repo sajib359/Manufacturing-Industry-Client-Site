@@ -36,7 +36,6 @@ const MyOrder = () => {
                             <th>Product</th>
                             <th>Quantity</th>
                             <th>Price</th>
-                            <th>Date/Time</th>
                             <th>Payment</th>
                             <th>Action</th>
                         </tr>
@@ -52,7 +51,7 @@ const MyOrder = () => {
                                 <td>{order.orderQty}</td>
                                 <td>{order.orderPrice}</td>
 
-                                {/* <td>
+                                <td>
                                     {order.orderPrice && !order.paid && (
                                         <Link to={`/dashboard/payment/${order._id}`}>
                                             <button className="btn btn-xs btn-secondary lg:px-5">
@@ -73,7 +72,7 @@ const MyOrder = () => {
                                             </p>
                                         </div>
                                     )}
-                                </td> */}
+                                </td>
                                 <td>
                                     <button
                                         // onClick={() => handleDeleteOrder(order._id)}
