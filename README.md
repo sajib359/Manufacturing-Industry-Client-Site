@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# manufacturer-website-client-side
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Computer parts Manufacturing Industry Limited
 
-## Available Scripts
 
-In the project directory, you can run:
+# Links
 
-### `npm start`
+## Live Site: [Client Side](https://manufacturing-industry-d2077.web.app/ "Client Side")
+## Server Link: [Server Side](https://agile-hamlet-27266.herokuapp.com/ "Server Side")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Futures 
+- User Can Buy Parts
+- user Can Pay For Their Order
+- Users can review
+- Admin can delivery cancel and ship order
+- admin can add new parts
+- admin can manage user
+## **Tasks **
+## Main 
+-  Site Must Be About Manufacturer.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Home Page
+-  Homepage Will have 
+   - Navbar
+  - Hero Banner
+  -  Parts Section
+    -  Tools Part Section will have 6 tools with Name, Img, description, minimum order quantity, available quantity, price per unit, buy now button
+  -  Business Summary Stats
+    - Business Stats
+  - Customer Testimonials 
+  -  Footer
+  - Two Different Section 
 
-### `npm test`
+### Purchase Page 
+-  It will be a private route
+-  User will redirect to the desire page after login
+-  Purchase page will show detail information about the parts
+-  Two Grid Card
+  -  One side will be about product
+  -  1st side, there will be option to change quantity but not more than available and not less than minimum quantity.
+  - ave user information on database upon login or create account
+- Show logout or user profile picture after login / before login only login button
+-  One Social Login Option 
+  
+### Dashboard 
+-  User will see a dashboard option after login 
+-  Non Admin will see My Orders, Review, My Profile Section
+-  User Can update their profile from my profile section 
+-  On My Order Page they will see their own order 
+-  User can cancel non paid order
+-  Warning before cancel
+-  Payment Button for non paid order
+-  Payment Page Will show order Descriptions 
+-  For Paid Order, User will see Trx ID on my order page 
+- Status Table paid, unpaid, pending 
+-  User can add review the review will be shown on home page. 
+- My Profile will show user name and and email address
+-  My Profile will have input fields like education, location, phone number,  linkedin profile. The information will be saved on database upon submit.
+- Admin Will see Manage All Order, Add a Product, Manage product,  Manage User
+- Admin Can add product with Image BB Upload Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Blog Page
+- Question answer in blog section
+### My Portfolio Route
+-  Show name, email, education background, skill tech and three live website like. 
 
-### `npm run build`
+### 404 Page
+-  Meaningful 404 Page 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bonus Part
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-  Readme file should have client and server link
+- Add 5 Bullet Point About Website Feaures
+-  Github Commit
+- Make Website responsive 
+-  No Lorem Ipsum
+-  use git ignore, .env 
+-  On Manage order all order will be shown, paid non paid status, admin can update the paid status
+-  admin can change the order status pending to shipped
+-  admin can cancel the order (non paid only)
+-  Confirm Before Delete
+-  basic JWT
+-  verify admin
+-  admin can delete product
+-  use react query for API Call
+-  Use React Hook Form
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What to submit 
+-  Client-side code github repository
+-  Server-side code github repository
+-  Live website link
+-  For our testing purpose, you will need to provide admin credentials (an email address and a password)
