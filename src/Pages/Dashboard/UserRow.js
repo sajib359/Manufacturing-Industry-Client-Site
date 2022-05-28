@@ -2,47 +2,47 @@ import React from 'react';
 import toast from 'react-hot-toast';
 
 const UserRow = ({ user, index, refetch }) => {
-    const makeAdmin = (email) => {
-        const url = `https://localhost:5000/user/admin/${email}`;
-        fetch(url, {
-          method: "put",
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.modifiedCount) {
-              refetch();
-              toast.success(`${user?.displayName} is now Admin`);
-            } else {
-              toast.error("You dont have enough permission!");
-            }
-          });
-      };
-    
-      const makeUser = (email) => {
-        const url = `https://localhost:5000/user/user/${email}`;
-        fetch(url, {
-          method: "put",
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data.modifiedCount) {
-              refetch();
-              toast.success(`${user?.displayName} is now Regular User`);
-            } else {
-              toast.error("You dont have enough permission!");
-            }
-          });
-      };
-    return (
-        <tr>
+  const makeAdmin = (email) => {
+    const url = `https://localhost:5000/user/admin/${email}`;
+    fetch(url, {
+      method: "put",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          refetch();
+          toast.success(`${user?.displayName} is now Admin`);
+        } else {
+          toast.error("You dont have enough permission!");
+        }
+      });
+  };
+
+  const makeUser = (email) => {
+    const url = `https://localhost:5000/user/user/${email}`;
+    fetch(url, {
+      method: "put",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          refetch();
+          toast.success(`${user?.displayName} is now Regular User`);
+        } else {
+          toast.error("You dont have enough permission!");
+        }
+      });
+  };
+  return (
+    <tr>
       <th>{index + 1}</th>
       <td>{user?.displayName}</td>
       <td>{user?.email}</td>
@@ -65,7 +65,7 @@ const UserRow = ({ user, index, refetch }) => {
         )}
       </td>
     </tr>
-    );
+  );
 };
 
 export default UserRow;

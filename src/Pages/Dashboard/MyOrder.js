@@ -37,6 +37,7 @@ const MyOrder = () => {
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Payment</th>
+                            <th>Transaction ID</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -61,17 +62,20 @@ const MyOrder = () => {
                                     )}
                                     {order.orderPrice && order.paid && (
                                         <div>
-                                            <button className="btn btn-xs disabled text-primary lg:px-4">
+                                            <button className="btn btn-xs disabled text-white lg:px-4">
                                                 Paid
                                             </button>
-                                            <p>
+                                           
+                                        </div>
+                                    )}
+                                </td>
+                                <td>
+                                <p>
                                                 Transaction id:{" "}
                                                 <span className="text-primary">
                                                     {order.transactionId}
                                                 </span>
                                             </p>
-                                        </div>
-                                    )}
                                 </td>
                                 <td>
                                     <button

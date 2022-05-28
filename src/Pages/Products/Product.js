@@ -9,20 +9,20 @@ const Product = ({ product }) => {
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure>
-                <img src={product.image} alt="Shoes" />
+                <img src={product.image} alt="" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">
+                <h2 className="card-title"> <span>Product name:</span>
                     {product.name}
                     <div className="badge badge-secondary p-3">${product.price}</div>
                 </h2>
                 <p className="pb-2">{product.description}</p>
                 <div className="flex justify-between">
                     <div className="badge badge-outline p-2">
-                        Min. Qty. - {product.minimum_quantity} pc's
+                        Min. Qty. - {product.minQty} pc's
                     </div>
                     <div className="badge badge-outline">
-                        Able. Qty. - {product.available_quantity} pc's
+                        Able. Qty. - {product.aQty} pc's
                     </div>
                 </div>
                 <button

@@ -14,7 +14,7 @@ const Reviews = () => {
           <h2 className="text-3xl text-primary font-bold text-center mt-7">
             Customer Review
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 my-10">
             {[...reviews]
               .reverse()
               .slice(0, 6)
