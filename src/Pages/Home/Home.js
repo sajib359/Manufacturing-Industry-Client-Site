@@ -3,6 +3,7 @@ import Products from "../Products/Products";
 import Footer from "../Shared/Footer/Footer";
 import Banner from "./Banner";
 import CompanyProfile from "./CompanyProfile";
+import HomeProducts from "./HomeProducts";
 import Ratting from "./Ratting";
 import Reviews from "./Reviews";
 
@@ -18,7 +19,7 @@ const Home = () => {
         This mainly Manufacture Computer Casing and Power Supply
       </p>
       </div>
-      <Products></Products>
+      <HomeProducts></HomeProducts>
       <Ratting></Ratting>
       <Reviews></Reviews>
       

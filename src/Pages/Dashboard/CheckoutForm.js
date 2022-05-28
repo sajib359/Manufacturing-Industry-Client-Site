@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, orderPrice, customerName, customerEmail } = order;
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://agile-hamlet-27266.herokuapp.com/create-payment-intent", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -83,20 +83,20 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id,
             };
-            fetch(`http://localhost:5000/order/${_id}`, {
-        method: "PATCH",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(payment),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setProcessing(false);
-          console.log(data);
-        });
-    }
-        
+            fetch(`https://agile-hamlet-27266.herokuapp.com/order/${_id}`, {
+                method: "PATCH",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(payment),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    setProcessing(false);
+                    console.log(data);
+                });
+        }
+
     }
     return (
         <>

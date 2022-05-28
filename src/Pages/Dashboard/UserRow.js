@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 
 const UserRow = ({ user, index, refetch }) => {
   const makeAdmin = (email) => {
-    const url = `https://localhost:5000/user/admin/${email}`;
+    const url = `https://agile-hamlet-27266.herokuapp.com/user/admin/${email}`;
     fetch(url, {
       method: "put",
       headers: {
@@ -23,7 +23,7 @@ const UserRow = ({ user, index, refetch }) => {
   };
 
   const makeUser = (email) => {
-    const url = `https://localhost:5000/user/user/${email}`;
+    const url = `https://agile-hamlet-27266.herokuapp.com/user/user/${email}`;
     fetch(url, {
       method: "put",
       headers: {

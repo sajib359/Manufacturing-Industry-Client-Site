@@ -3,7 +3,7 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import Swal from 'sweetalert2';
 
-const ManageOrderRow = ({order, refetch, index}) => {
+const ManageOrderRow = ({ order, refetch, index }) => {
     const markPaid = (id) => {
         const url = `https://localhost/5000/order/${id}`;
         console.log(url);
@@ -25,7 +25,7 @@ const ManageOrderRow = ({order, refetch, index}) => {
             });
     };
     const addShipment = (id) => {
-        const url = `http://localhost:5000/ship/${id}`;
+        const url = `https://agile-hamlet-27266.herokuapp.com/ship/${id}`;
         console.log(url);
         fetch(url, {
             method: "put",
@@ -78,7 +78,7 @@ const ManageOrderRow = ({order, refetch, index}) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            
+
             <td>{order.address}</td>
             <td>{order.orderPName}</td>
             <td>{order.orderQty}</td>
@@ -89,11 +89,11 @@ const ManageOrderRow = ({order, refetch, index}) => {
             </td>
             <td>
                 {order?.paid !== true ? <span
-                        onClick={() => markPaid(order._id)}
-                        className="bg-primary text-center p-1 my-1 block text-white rounded cursor-pointer"
-                    >
-                        Make Paid
-                    </span>: <p>Paid</p> }
+                    onClick={() => markPaid(order._id)}
+                    className="bg-primary text-center p-1 my-1 block text-white rounded cursor-pointer"
+                >
+                    Make Paid
+                </span> : <p>Paid</p>}
                 {order?.orderStatus === "placed" && (
                     <span
                         onClick={() => addShipment(order._id)}
@@ -107,7 +107,7 @@ const ManageOrderRow = ({order, refetch, index}) => {
                         onClick={() => delOrder(order._id)}
                         className="bg-red-600 block text-center p-1 my-1 text-white rounded cursor-pointer"
                     >
-                       Delete Order
+                        Delete Order
                     </span>
                 )}
             </td>

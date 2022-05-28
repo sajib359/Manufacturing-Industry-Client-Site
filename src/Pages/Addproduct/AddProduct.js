@@ -32,7 +32,7 @@ const AddProduct = () => {
       // owneremail,
       // userid,
     };
-    const url = "http://localhost:5000/product";
+    const url = "https://agile-hamlet-27266.herokuapp.com/product";
     fetch(url, {
       method: "POST",
       headers: {
@@ -160,7 +160,7 @@ const AddProduct = () => {
               />
             </div>
           </div>
-          
+
 
           <button
             type="submit"

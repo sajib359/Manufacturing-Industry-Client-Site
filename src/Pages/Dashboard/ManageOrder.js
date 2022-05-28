@@ -4,23 +4,23 @@ import Loading from '../Shared/Loading';
 import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrder = () => {
-    const {
-        data: orders,
-        isLoading,
-        refetch,
-      } = useQuery("myOrders", () =>
-        fetch("http://localhost:5000/orders", {
-          headers: {
-            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        }).then((res) => res.json())
-      );
-      if (isLoading) {
-        return <Loading></Loading>;
-      }
-      console.log(orders);
-    return (
-        <div>
+  const {
+    data: orders,
+    isLoading,
+    refetch,
+  } = useQuery("myOrders", () =>
+    fetch("https://agile-hamlet-27266.herokuapp.com/orders", {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    }).then((res) => res.json())
+  );
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  console.log(orders);
+  return (
+    <div>
       <div className="overflow-x-auto">
         <table className="table table-compact w-full">
           <thead>
@@ -58,7 +58,7 @@ const ManageOrder = () => {
         </table>
       </div>
     </div>
-    );
+  );
 };
 
 export default ManageOrder;
